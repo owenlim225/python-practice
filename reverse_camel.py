@@ -3,7 +3,7 @@ def reverseCamel(text):
     
     for i in text:
         
-        if i.upper() and result:
+        if i.isupper() and result:
             result += ' ' + i.lower()
         else:
             result += i.upper()
@@ -16,6 +16,5 @@ if __name__ == "__main__":
     text = input("Text: ")
     
     result = reverseCamel(text)
-    
     print(result)
     
