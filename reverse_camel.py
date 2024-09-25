@@ -4,8 +4,11 @@ def reverseCamel(text):
     for i in text:
         
         # Check if i is all uppercase and result is not emptpy
-        if i.isupper() and result:
-            result += ' ' + i.lower()
+        if i.isupper():
+            if result:
+                result += ' ' + i.lower()
+            else:
+                result += i.lower()
         else:
             result += i.upper()
     
